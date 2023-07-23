@@ -10,6 +10,7 @@ public class Calculator {
     public int multiply(int a) {
         return x * a;
     }
+
     public static int minus(int b) {
         return b - x;
     }
