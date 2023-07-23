@@ -18,7 +18,7 @@ class TriangleTest {
     }
 
     @Test
-    void when00and40and04ThenFalse() {
+    void when40and40and40ThenFalse() {
         Point a = new Point(4, 0);
         Point b = new Point(4, 0);
         Point c = new Point(4, 0);
