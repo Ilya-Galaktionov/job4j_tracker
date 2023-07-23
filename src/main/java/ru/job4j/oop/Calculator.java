@@ -7,7 +7,6 @@ public class Calculator {
         return x + y;
     }
 
-
     public int multiply(int a) {
         return x * a;
     }
