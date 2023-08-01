@@ -26,7 +26,7 @@ public class Library {
         System.out.println();
         System.out.println("Show only \"Clean code\"");
         for (Book paper: bk) {
-            if (paper.getName().equals("Clean code")) {
+            if ("Clean code".equals(paper.getName())) {
                 System.out.println(paper.getName() + ": " + paper.getPageCount());
             }
         }
