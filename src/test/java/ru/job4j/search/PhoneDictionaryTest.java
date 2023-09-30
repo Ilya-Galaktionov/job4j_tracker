@@ -23,7 +23,7 @@ class PhoneDictionaryTest {
         phones.add(
                 new Person("Petr", "Arsentev", "534872", "Bryansk")
         );
-        ArrayList<Person> persons = phones.find("Petr");
-        assertThat(persons.isEmpty());
+        ArrayList<Person> persons = phones.find("Ilya");
+        assertThat(persons).isEmpty();
     }
 }
