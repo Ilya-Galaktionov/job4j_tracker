@@ -13,7 +13,8 @@ public class ReconstructPhrase {
 
     private String getEvenElements() {
         StringBuilder evenPhrase = new StringBuilder();
-        for (int index = evenElements.size(); index > 0; index--) {
+        int count = evenElements.size();
+        for (int index = 0; index < count; index++) {
             if (evenElements.size() % 2 == 0 && evenElements.peek() != null) {
                 evenPhrase.append(evenElements.pollFirst());
             }
@@ -24,7 +25,8 @@ public class ReconstructPhrase {
 
     private String getDescendingElements() {
         StringBuilder descendingPhrase = new StringBuilder();
-        for (int index = descendingElements.size(); index > 0; index--) {
+        int count = descendingElements.size();
+        for (int index = 0; index < count; index++) {
             descendingPhrase.append(descendingElements.pollLast());
         }
         return descendingPhrase.toString();
