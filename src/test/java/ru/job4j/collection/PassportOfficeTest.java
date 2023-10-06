@@ -16,7 +16,7 @@ class PassportOfficeTest {
     @Test
     void whenCheckDuplicate() {
         Citizen citizen = new Citizen("2f44a", "Petr Arsentev");
-        Citizen anotherCitizen = new Citizen("2f44a", "Petr Arsentev");
+        Citizen anotherCitizen = new Citizen("2f44a", "Petr");
         PassportOffice office = new PassportOffice();
         office.add(citizen);
         assertThat(office.add(anotherCitizen)).isFalse();
