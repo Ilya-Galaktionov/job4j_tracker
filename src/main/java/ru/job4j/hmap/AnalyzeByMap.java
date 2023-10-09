@@ -51,8 +51,8 @@ public class AnalyzeByMap {
                 scoreSum += subject.score();
             }
             rsl.add(new Label(pupil.name(), scoreSum));
-            rsl.sort(Comparator.naturalOrder());
         }
+        rsl.sort(Comparator.naturalOrder());
         return rsl.get(rsl.size() - 1);
     }
 
@@ -66,8 +66,8 @@ public class AnalyzeByMap {
         }
         for (Map.Entry<String, Integer> entry : map.entrySet()) {
             rsl.add(new Label(entry.getKey(), entry.getValue()));
-            rsl.sort(Comparator.naturalOrder());
         }
+        rsl.sort(Comparator.naturalOrder());
         return rsl.get(rsl.size() - 1);
     }
 }
