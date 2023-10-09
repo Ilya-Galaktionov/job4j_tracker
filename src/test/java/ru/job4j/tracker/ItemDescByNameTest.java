@@ -3,7 +3,6 @@ package ru.job4j.tracker;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
@@ -15,7 +14,7 @@ class ItemDescByNameTest {
         Item two = new Item("2");
         Item three = new Item("3");
         List<Item> items = Arrays.asList(one, three, two);
-        Collections.sort(items, new ItemDescByName());
+        items.sort(new ItemDescByName());
         List<Item> expected = Arrays.asList(three, two, one);
         assertThat(items).isEqualTo(expected);
     }
