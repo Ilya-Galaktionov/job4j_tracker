@@ -64,15 +64,13 @@ public class BankService {
      */
 
     public User findByPassport(String passport) {
-        User rsl = null;
-        for (User user : users.keySet()) {
-            if (user.getPassport().equals(passport)) {
-                rsl = user;
-                break;
-            }
-        }
-        return rsl;
+        return users.keySet()
+                .stream()
+                .filter(u -> u.getPassport().equals(passport))
+                .findFirst()
+                .orElse(null);
     }
+
     /**
      * Метод позволяет найти пользователя по реквизитам счета
      * @param passport номер паспорта искомого пользователя
@@ -82,15 +80,14 @@ public class BankService {
 
     public Account findByRequisite(String passport, String requisite) {
         User user = findByPassport(passport);
-        if (user != null) {
-            List<Account> accountList = users.get(user);
-            for (Account account : accountList) {
-                if (account.getRequisite().equals(requisite)) {
-                    return account;
-                }
-            }
+        if (user == null) {
+            return null;
         }
-        return null;
+        return users.get(user)
+                .stream()
+                .filter(u -> u.getRequisite().equals(requisite))
+                .findFirst()
+                .orElse(null);
     }
 
     /**
